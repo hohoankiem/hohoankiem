@@ -1,0 +1,11 @@
+{
+  "name": "ho-hoan-kiem",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "node scripts/build.mjs && node scripts/fetch-pexels.mjs",
+    "start": "npx --yes serve dist"
+  }
+}
