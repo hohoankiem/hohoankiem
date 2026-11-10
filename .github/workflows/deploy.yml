@@ -1,4 +1,4 @@
-name: Deploy Hồ Hoàn Kiếm lên GitHub Pages
+name: Deploy Hoan Kiem Lake to GitHub Pages
 
 on:
   push:
@@ -22,10 +22,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Build (tải ảnh Pexels)
+      - name: Build (download image Pexels / Unsplash / Pixabay)
         run: npm run build
         env:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
+          IMAGE_PROVIDERS: ${{ vars.IMAGE_PROVIDERS }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

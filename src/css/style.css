@@ -129,3 +129,13 @@ html.splash-open{overflow:hidden}
   .sun{transform:translate(-50%,-50%)}.tower{transform:translate(-50%,-50%)}
   .rings{display:none}.splash{transition:none}
 }
+
+/* Chuyển động & cuộn trang (chỉ thêm animation, không đổi giao diện) */
+@media (prefers-reduced-motion:no-preference){
+  .js :is(.legend-text>*,.places>h2,.place>div>*,.gallery>h2,.visit>h2,.visit li,.map-text>*,footer p,footer ul,.frame,.g,.hero-text>*,.hero .vertical):not(.in){opacity:0}
+}
+html.motion .hero .photo{translate:0 var(--hy,0px)}
+html.motion .frame .photo{scale:1.12;translate:0 var(--py,0px);transition:scale 1s cubic-bezier(.2,.7,.2,1);will-change:translate}
+html.motion .frame:hover .photo{scale:1.17}
+html.motion .btn,html.motion .lang-btn{transition:background .25s,color .25s,scale .3s cubic-bezier(.2,.7,.2,1)}
+html.motion .btn:active,html.motion .lang-btn:active{scale:.95}

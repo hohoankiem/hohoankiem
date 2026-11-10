@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script>
+    document.documentElement.classList.add("js");
+    // Nếu module animation không nạp được thì bỏ ẩn nội dung để trang vẫn đọc được
+    setTimeout(function () { if (!window.__motion) document.documentElement.classList.remove("js"); }, 4000);
+  </script>
 </head>
 <body>
   <div class="splash" id="splash" role="dialog" aria-label="Chào mừng / Welcome">
@@ -145,10 +150,7 @@
       <span class="vi">Thiết kế và thực hiện bởi minhduc290613 và <a href="https://github.com/hohoankiem" target="_blank" rel="noopener">Ho Hoan Kiem Team</a>.</span>
       <span class="en">Made and designed by minhduc290613 and <a href="https://github.com/hohoankiem" target="_blank" rel="noopener">Ho Hoan Kiem Team</a>.</span>
     </p>
-    <p>
-      <span class="vi">Ảnh từ <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>.</span>
-      <span class="en">Photos from <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a>.</span>
-    </p>
+    <p id="providers"></p>
     <ul id="credits"></ul>
   </footer>
 

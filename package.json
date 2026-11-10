@@ -5,7 +5,7 @@
   "type": "module",
   "engines": { "node": ">=20" },
   "scripts": {
-    "build": "node scripts/build.mjs && node scripts/fetch-pexels.mjs",
+    "build": "node scripts/build.mjs && node scripts/fetch-images.mjs",
     "start": "npx --yes serve dist"
   }
 }
